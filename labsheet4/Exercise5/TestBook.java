@@ -1,4 +1,6 @@
-package labsheet4.Exercise4;
+package labsheet4.Exercise5;
+
+import labsheet4.Exercise4.Book;
 
 import javax.swing.*;
 
@@ -13,7 +15,7 @@ public class TestBook {
         ISBN = JOptionPane.showInputDialog(null,"Please enter the ISBN of your favourite book");
         pages = Integer.parseInt(JOptionPane.showInputDialog(null,"Please enter how many pages your favourite book has"));
 
-        Book favBook = new Book(title,price,ISBN,pages);
+        labsheet4.Exercise4.Book favBook = new labsheet4.Exercise4.Book(title,price,ISBN,pages);
 
         output += "\n\n" + favBook.toString();
 
@@ -22,7 +24,7 @@ public class TestBook {
         ISBN = JOptionPane.showInputDialog(null,"Please enter the ISBN of your least favourite book");
         pages = Integer.parseInt(JOptionPane.showInputDialog(null,"Please enter how many pages your least favourite book has"));
 
-        Book leastFavBook = new Book(title,price,ISBN,pages);
+        labsheet4.Exercise4.Book leastFavBook = new Book(title,price,ISBN,pages);
 
         output += "\n\n" + leastFavBook.toString();
 
