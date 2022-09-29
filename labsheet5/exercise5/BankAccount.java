@@ -1,19 +1,21 @@
-package labsheet5.exercise4;
+package labsheet5.exercise5;
 
 public class BankAccount {
 
     private String owner;
     private int number;
+    private static int count;
     private static double interestRate;
 
     public BankAccount(){
-        this("Owner not available",0,0);
+        this("Owner not available",0);
     }
 
-    public BankAccount(String owner,int number,double interestRate){
+    public BankAccount(String owner, double interestRate){
         setOwner(owner);
-        setNumber(number);
+        setNumber(count);
         setInterestRate(interestRate);
+        incrementCount();
     }
 
     public String getOwner() {
@@ -26,6 +28,14 @@ public class BankAccount {
 
     public static double getInterestRate() {
         return interestRate;
+    }
+
+    private static void incrementCount(){
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     public void setOwner(String owner) {
@@ -41,7 +51,7 @@ public class BankAccount {
     }
 
     public String toString(){
-        return "Owner: " + getOwner() + " Number: " + getNumber() +
+        return "Owner: " + getOwner() + " Number: " + getCount() +
                 " Interest Rate: " + getInterestRate();
     }
 }
