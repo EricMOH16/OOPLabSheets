@@ -6,7 +6,7 @@ public class Person {
     private String lastName;
 
     public Person(){
-        this("Not available","Not available");
+        this("Not supplied","Not supplied");
     }
 
     public Person(String firstName,String lastName){
@@ -32,6 +32,6 @@ public class Person {
 
     public String toString(){
 
-      return   "First name: " + getFirstName() + " Last Name: " + getLastName();
+      return   "First name: " + getFirstName() + "  Last Name: " + getLastName();
     }
 }
